@@ -1,0 +1,360 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 1200px;
+    margin: auto;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+header{
+    background-color: #13110d6b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+.header-left{
+    width: 30%;
+    float: left;
+}
+.logo{}
+.header-right{
+    width: 70%;
+    float: right;
+}
+.header-right nav{
+    text-align: right;
+}
+.header-right nav ul{}
+.header-right nav ul li{
+    display: inline-block;
+}
+.color{
+    color: #c69453 !important;
+}
+.header-right nav ul li a {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0 15px;
+    line-height: 69px;
+    color: #fff;
+    font-size: 15px;
+    position: relative;
+}
+.header-right nav ul li:hover > a{
+    color: #c69453;
+}
+.header-right nav ul li a i {
+    font-size: 19px;
+    font-weight: 600;
+}
+.header-right nav ul li a::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: #c69453;
+    transition: .5s;
+}
+.header-right nav ul li a::after{
+    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: #c69453;
+    transition: .5s;
+}
+.header-right nav ul li a:hover::before, .header-right nav ul li a:hover::after{
+    width: 42%;
+    transition: .5s;
+}
+/* dropdown css */
+.header-right nav ul li{
+    position: relative;
+}
+.header-right nav ul li ul{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 230px;
+    background-color: #fff;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    transform-origin: center;
+    transform: scaleY(0);
+}
+.header-right nav ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+    transition: .5s;
+}
+.header-right nav ul li ul li{
+    display: block;
+}
+.header-right nav ul li ul li a:hover::before, .header-right nav ul li ul li a:hover::after{
+    width: 0;
+    
+}
+.header-right nav ul li ul li a{
+    color: #000;
+    line-height: 55px;
+    display: block;
+}
+.header-right nav ul li ul li:hover a{
+    background-color: rgba(124, 119, 119, 0.527);
+}
+/* banner css start */
+.banner{
+    background: url(../img/banner.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 170px;
+    position: relative;
+    position: relative;
+    z-index: 1;
+}
+.banner::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: rgba(36, 33, 33, 0.664);
+}
+.inner{
+    text-align: center;
+    color: #fff;
+    
+}
+.inner h1 {
+    font-size: 70px;
+}
+.inner h2 {
+    font-size: 33px;
+    margin-top: -30px;
+    font-weight: 600;
+    position: relative;
+}
+.inner h2::before {
+    content: "";
+    position: absolute;
+    left: 22%;
+    top: 23px;
+    height: 2px;
+    width: 8%;
+    background-color: #fff;
+}
+.inner h2::after {
+    content: "";
+    position: absolute;
+    left: 70%;
+    top: 23px;
+    height: 2px;
+    width: 8%;
+    background-color: #fff;
+}
+.inner a {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 36px;
+    background-color: #c69453;
+    padding: 13px 30px;
+    color: #fff;
+    border-radius: 27px;
+    transition: .4s;
+}
+.inner a:hover{
+    color: #c69453;
+    background-color: #fff;
+    transition: .4s;
+}
+/* service css start */
+.service{
+    background-color: #f8f8f8;
+    padding: 80px 0 80px 0;
+}
+.ser-box{
+    width: 23.5%;
+    background-color: #fff;
+    padding: 40px 10px;
+    box-sizing: border-box;
+    transition: .4s;
+    margin-bottom: 150px;
+}
+.s-img img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+.ser-box:hover .s-img img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: rotateY(360deg);
+    transition: 1s;
+}
+.ser-box:hover{
+    background-color: #e8e6e4;
+    transition: .4s;
+}
+.ser-box:hover .btn a{
+    color:#c69453;
+    background-color: #fff;
+    transition: .4s;
+}
+.mr{
+    margin-right: 2%;
+}
+.ser-box h3{
+    font-weight: 500;
+    margin: 33px 0 20px 0;
+}
+.ser-box p{
+    color: #757473;
+}
+.btn a {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 30px;
+    background-color: #c69453;
+    padding: 9px 19px;
+    color: #fff;
+    border-radius: 5px;
+    transition: .4s;
+}
+.btn a:hover{
+    color: #fff !important;
+    background-color: #000 !important;
+    transform: translateY(8px) !important;
+}
+/* about start */
+.about-left {
+    width: 48%;
+    margin-top: 33px;
+}
+.about-right{
+    width: 48%;
+}
+.content {
+    margin-top: 67px;
+}
+.content h1 {
+    font-size: 43px;
+}
+.content h1 span{
+    color: #c69453;
+}
+.content p {
+    
+}
+.bottomp{
+    margin: 26px 0;
+}
+.content a {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #000;
+    color: #fff;
+    padding: 9px 12px;
+    transition: .4s;
+}
+.content a:hover{
+    color: #fff;
+    background-color: #c69453;
+}
+/* form css start */
+.form-section{
+    background: url(../img/quote.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+}
+.form-left{
+    width: 40%;
+    margin-left: 5%;
+}
+.con h2 {
+    font-size: 42px;
+}
+.con p {
+    margin: 19px 0 33px 0;
+}
+.form form input {
+    width: 100%;
+    padding: 16px 0 16px 15px;
+    margin-bottom: 11px;
+    border: 1px solid #ddd;
+}
+.form form textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 15px 0 0 15px;
+}
+.btn5 {
+    color: #fff;
+    background-color: #c69453;
+    padding: 15px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 3px;
+}
+/* footer */
+.footer{
+    padding: 40px 0;
+    background-color: #757473;
+}
+.footer-left{
+    width: 50%;
+}
+.footer-left p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+}
+.footer-right{
+    width: 50%;
+}
+.footer-right nav ul{
+    list-style: none;
+    text-align: center;
+}
+.footer-right nav ul li{
+    display: inline-block;
+}
+.footer-right nav ul li a{
+    color: #fff;
+    padding: 0 13px;
+}
+
+
